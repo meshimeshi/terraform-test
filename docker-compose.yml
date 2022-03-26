@@ -1,0 +1,10 @@
+version: '3'
+services:
+  terraform:
+    restart: always
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - ./terraform:/terraform
+    working_dir: /terraform/terraform
